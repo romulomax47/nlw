@@ -8,47 +8,54 @@
 :root{
     font-size: 62.5% ;
 }
+html{
+    scroll-behavior: smooth;
+}
 body{
+    background-color: rgba(247, 249, 249, 1);
     width: 100%;
     text-align: center;
     font-family: 'DM Sans';
     overflow: overlay;
 }
-ul,li{
+ul,li, a{
+    color: white;
     text-decoration: none;
 }
 .wapp{
     padding: 0rem 2.4rem 0rem 2.4rem;
     width: 37.5rem;
     margin-inline: auto;
-    /* padding-inline: 2.4rem; */
+    padding-inline: 2.4rem;
 }
 /* nav inicio */
 
 
 nav {
     display: flex;
+    width: 37.4rem;
     justify-content: space-between;
     height: 7.2rem;
     position: fixed;
     top: 0rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 100;
 }
 
 
 
 /* nav fim */
-header{
+#homer{
     
-    margin-top: calc(4.2rem + 7.2rem);
+    padding-top: calc(4.2rem + 7.2rem);
 }
 
 
-header::before{
+#homer:before{
     content: "";
     display: block;
-    width: 100%;
+    width: 37.5rem;
     height: calc(108rem + 7.2rem);
     background-color: rgba(220, 233, 226, 1);
     position: absolute;
@@ -67,21 +74,21 @@ header::before{
 
 
 
-header .boas-vindas{
-    padding: 3rem;
+.boas-vindas{
+    margin-bottom: 2.4rem;
     color: #00856f;
     font-weight: 700;
     font-size: 1.8rem;
     
 }
-header .titulo{
+#homer .titulo{
     font-size: 3.4rem;
     color: #212529;
     line-height: 130%;
     margin-bottom: 2.4rem;
 
 }
-header p {
+#homer p {
     margin-bottom: 2.4rem;
     font-weight: 400;
     font-size: 1.7rem;
@@ -89,7 +96,7 @@ header p {
     color: rgba(73, 80, 87, 1);
 }
 
-header .header-btn{
+#homer .header-btn{
     margin-bottom: 6rem ;
     background: #00856F;
     border-radius: 4rem;
@@ -99,7 +106,7 @@ header .header-btn{
     gap: 1.6rem;
     padding: 1.6rem 3.2rem;
 }
-header .btn{
+#homer .btn{
     background: none;
     border: none;
     font-size: 1.4rem;
@@ -143,7 +150,7 @@ nav .wapp{
 }
 nav.scrol{
     background-color: #00453A;
-    width: 100vw;
+    width: 100%;
 
 
 }
@@ -156,6 +163,9 @@ nav.scrol svg:nth-child(2) path{
     stroke: white;
 
 }
+nav .social-link ul{
+    text-decoration: none;
+}
 nav button{
     background: none;
     border: none;
@@ -166,17 +176,13 @@ nav button{
 
 /* css menu opem */ 
 
-body.menu-expanded, .menu {
-    overflow: hidden;
-}
 .menu,
-.fecha-menu{
-    position: relative;
-    
+.fecha-menu {
+    /* transform: translateY(100%); */
     display: none;
 }
  
-body.menu-expanded .menu,
+body.menu-expanded .menu, 
 body.menu-expanded .fecha-menu{
     display: block;
 
@@ -184,14 +190,21 @@ body.menu-expanded .fecha-menu{
 body.menu-expanded .menu{
 
     background-color:#00856f;
+    display: block;
     position: fixed;
     top:0rem;
     left: 0;
-    width: 100vw;
+    width: 37.4rem;
     height: 100vh;
+    /* transition: trasform 300ms; */
+
+    /* transform: translateY(0%); */
+    /* z-index: 105; */
+    
 }
 body.menu-expanded nav {
     position: relative;
+
     
 
 }
@@ -216,13 +229,14 @@ body.menu-expanded nav {
 }
 .menu ul:nth-child(1){
     margin-top: 13.2rem;
-    color: white;
     display: flex;
     flex-direction: column;
     gap: 4.8rem;
     Font-size: 2.4rem;
 line-height: 3.1rem;   
-    /* justify-content: space-between; */
+}
+body.menu-expanded > :not(nav){
+    display: none;
 }
 
 body.menu-expanded .logo,
@@ -241,6 +255,100 @@ body.menu-expanded .fecha-menu path{
     stroke: white;
 
 }
+
+/* serviços */
+ #servico{
+    padding-top: 8rem; 
+    height: 160.4rem;
+    
+}
+section .wapp header h4 {
+    text-transform: uppercase;
+    color:#00453A;
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+    
+}
+
+section .wapp header h2{
+    width: 31.4rem;
+    height: 11.7rem;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4.9rem;
+
+}
+
+
+section .wapp .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 4.3rem;
+    text-align: left;
+    
+    
+
+}
+section .wapp .card .icon-card{
+
+}
+section .wapp .cards .card{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    padding-inline: 2.4rem;
+    width: 32.7rem;
+    height: 20.7rem;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(220, 233, 226, 1);
+    border-radius: .6rem;
+    
+}
+
+section .wapp .cards .card h2{
+    font-size: 2.5rem;
+    color: rgba(33, 37, 41, 1);
+}
+
+section .wapp .cards .card p {
+    color: rgba(73, 80, 87, 1);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: left;
+}
+
+
+/* end serviço */
+
+/* sobre inicio */
+#about{
+    background-color: rgba(255, 250, 241, 1);
+    text-align: left;
+    height: 83rem;
+    padding-top: 10rem;
+}
+#about .wapp h5{
+
+    margin-bottom: 1.6rem;
+    color:rgba(0, 133, 111, 1);
+    font-size: 1.4rem;
+    font-weight: 700 bold;
+    
+}
+#about .wapp h2{
+    font-size: 3rem;
+    color:rgba(33, 37, 41, 1);
+    margin-bottom: 2.4rem;
+
+}
+#about .wapp p{
+    color:rgba(73, 80, 87, 1);
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+    
+}
+/* sobre-fim */
 
 
 

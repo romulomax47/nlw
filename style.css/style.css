@@ -1,0 +1,710 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,500;0,700;1,400&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+
+    font-size: 62.5% ;
+    /* cor primary */
+    --cor-brand-green: #00856f;
+    --cor-brand-green-light:#dce9e2;
+    --cor-brand-green-lignt2:#F7F9F9;
+    --cor-brand-beige: #FFFAF1;
+    --cor-brand-green-hover:#00453A;
+    --cor-gray-headline:#061800;
+    --cor-gray-paragraph:#384633;
+    --cor-white:WHITE;
+}
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    background-color: var(--cor-brand-green-lignt2);
+    width: 100vw;
+    text-align: center;
+    font-family: 'DM Sans';
+    /* overflow: scroll; */
+}
+ul,li, a{
+    color: white;
+    text-decoration: none;
+}
+.wapp{
+    width: min(50rem, 100%);
+    margin-inline: auto;
+    padding-inline: 2.4rem;
+}
+/* nav inicio */
+
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 7.2rem;
+    position: fixed;
+    top: 0rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+}
+
+
+
+/* nav fim */
+#homer{
+    
+    padding-top: calc(4.2rem + 7.2rem);
+}
+
+
+#homer:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: calc(76% + 7.2rem);
+    background-color: var(--cor-brand-green-light);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+
+
+
+
+.boas-vindas{
+    margin-bottom: 2.4rem;
+    color: var(--cor-brand-green);
+    font-weight: 700;
+    font-size: 1.8rem;
+    
+}
+#homer .titulo{
+    font-size: 3.4rem;
+    color: var(--cor-gray-headline);
+    line-height: 130%;
+    margin-bottom: 2.4rem;
+
+}
+#homer p {
+    margin-bottom: 2.4rem;
+    font-weight: 400;
+    font-size: 1.7rem;
+    line-height: 2.7rem;
+    color: var(--cor-gray-paragraph);
+}
+
+#homer .button{
+    margin-bottom: 6rem ;
+    background: #00856F;
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 1.6rem 3.2rem;
+    width: fit-content;
+    margin-inline: auto;
+}
+#homer .button:hover{
+    background-color: var(--cor-brand-green-hover);
+    transition: 200ms;
+}
+#homer .btn{
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--cor-white);
+    font-weight: 700;
+    
+}
+
+.mulher{
+    display: block;
+    width: 26.3rem;
+    margin-inline: auto;
+    object-position: 0 20px;
+
+}
+.numeros{
+    height: 47rem;
+    border-radius: .6rem;
+    border: 1px solid var(--cor-brand-green-lignt2);
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(255, 250, 241, 1);
+    
+}
+.numeros .numeros-item h2{
+    font-size: 4.8rem;
+    color: var(--cor-gray-headline);
+    
+}
+.numeros .numeros-item p{
+    /* font-size: 1.6rem; */
+    color: var(--cor-brand-green-hover)
+}
+nav .wapp{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav.scrol{
+    background-color: var(--cor-brand-green);
+    width: 100%;
+
+
+}
+nav.scrol svg:nth-child(1) path{
+    fill: var(--cor-white);
+
+
+}
+nav.scrol  path{
+    stroke:white ;
+
+}
+nav .social-link ul{
+    text-decoration: none;
+}
+nav button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* css menu opem */ 
+
+.menu,
+.fecha-menu {
+    display: none;
+}
+
+body.menu-expanded .menu, 
+body.menu-expanded .fecha-menu{
+    display: block;
+    
+}
+body.menu-expanded .menu{
+    
+    background-color: var(--cor-brand-green);
+    display: block;
+    position: fixed;    
+    top:0rem;
+    left: 0rem;
+    width: 100vw;
+    height: 100vh;
+    
+}
+body.menu-expanded nav {
+    /* position: relative; */
+    
+    
+
+}
+.social-link{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3.2rem;
+    
+}
+.menu .btn-agenda{
+    width: 27.4rem;
+    height: 5.5rem;
+    color: rgba(0, 133, 111, 1);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    font-weight: 700,bold;
+    border-radius: 4rem;
+    border: none;
+    background-color: var(--cor-white);
+    margin-block: 4.8rem  8rem;
+}
+.menu ul:nth-child(1){
+    margin-top: 13.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    Font-size: 2.4rem;
+line-height: 3.1rem;   
+}
+body.menu-expanded > :not(nav){
+    display: none;
+}
+
+body.menu-expanded .logo,
+body.menu-expanded .fecha-menu{
+    position: relative;
+    z-index: 100;
+}
+
+body.menu-expanded .logo path{
+    fill: var(--cor-white);
+    position: relative;
+
+
+}
+body.menu-expanded .fecha-menu path{
+    stroke: var(--cor-white);
+
+}
+
+/* serviços */
+ #servico{
+     background-color:var(--cor-brand-green-lignt2);
+    padding-block: 8rem; 
+    height:100%;
+    
+}
+section .wapp header h4 {
+    text-transform: uppercase;
+    color: var(--cor-brand-green);
+    font-size: 1.4rem;
+    margin-bottom: 1.6rem;
+    
+}
+
+section .wapp header h2{
+    width: 31.4rem;
+    height: 11.7rem;
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 4.9rem;
+
+}
+
+
+section .wapp .cards{
+    display: flex;
+    flex-direction: column;
+    gap: 4.3rem;
+    text-align: left;
+    
+    
+
+}
+section .wapp .card .icon-card{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 2.4rem;
+    height: 2.4rem;
+    background-color: var(--cor-brand-green-light);
+    border-radius: 50%;
+  
+
+}
+section .wapp .card{
+    display: flex;
+    flex-direction: column; 
+    justify-content: space-evenly;
+    padding-inline: 2.4rem;
+    width: calc(50rem ,100%);
+    height: 20.7rem;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(220, 233, 226, 1);
+    border-radius: .6rem;
+    
+}
+
+section .wapp .cards .card h2{
+    font-size: 2.5rem;
+    color: rgba(33, 37, 41, 1);
+}
+
+section .wapp .cards .card p {
+    color: var(--cor-gray-paragraph);
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: left;
+}
+
+
+/* end serviço */
+
+/* sobre inicio */
+#about{
+    background-color: var(--cor-brand-beige);
+    width: 100%;
+    text-align: left;
+    height: 100%;
+    padding-top: 10rem;
+}
+#about .wapp h5{
+    
+    /* margin-bottom: 1.6rem;   */
+    
+}
+#aboute .wapp{
+    color:var(--cor-brand-green);
+    font-size: 1.4rem;
+    
+}
+#about .wapp h2{
+    font-size: 3rem;
+    color: var(--cor-gray-headline);
+    margin-bottom: 2.4rem;
+    font-weight: 700 bold;
+
+}
+#about .wapp p{
+    color:var(--cor-gray-headline);
+    line-height: 2.4rem;
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+    
+}
+#about .wapp img{
+    width: 32.7rem;
+
+}
+/* sobre-fim */
+/* contato inicio */
+#contato{
+    background-color: white;
+    text-align: left;
+    width: 100%;
+    padding-top: 8.8rem;
+}
+#contato .wapp img {
+    width: 32.7rem;
+}
+#contato .wapp h2{
+    width: 90%;
+    font-size: 3rem;
+    color: var(--cor-gray-headline);
+    margin-bottom: 4.4rem;
+}
+#contato .wapp .end-contato {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+
+    gap: .8rem;
+    margin-bottom: 1.6rem;
+}
+#contato .wapp .end-contato p {
+    color: var(--cor-gray-paragraph);
+    font-size: 1.6rem;
+}
+#contato .wapp .button{
+    margin-bottom: 6rem ;
+    background: #00856F;
+    border-radius: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.6rem;
+    padding: 1.6rem 3.2rem;
+    width: fit-content;
+    margin-bottom: 5.4rem;
+    margin-top: 3.8rem;
+
+}
+#contato .wapp .btn{
+    background: none;
+    border: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--cor-white);
+    
+}
+#contato .button:hover{
+    background-color: rgba(0,69,58,1);
+    transition: 200ms;
+}
+/* contato---FIM */
+footer{
+    width: 100%;
+    background-color: var(--cor-brand-green);
+    /* text-align: left; */
+    padding-block: 6rem;
+}
+footer .logo svg{
+    width: 23.6rem;
+    height: 3.6rem;
+    margin-bottom: 2.4rem;
+}
+footer .wapp .logo path {
+    fill: white;
+    
+}
+
+footer .wapp p{
+    color: var(--cor-brand-beige);
+    line-height: 2;
+    /* margin-bottom: 3.5rem; */
+}
+#top{
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(100%);
+    transition: 200ms;
+   
+}
+#top.show{
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0%);
+}
+
+@media (min-width: 1024px){
+
+    body{
+        width: 100vw;
+        overflow: auto;
+    }
+    .wapp{
+        width: min(112rem, 100%);
+        display: grid;
+        /* padding-inline: 0; */
+    }
+    section{
+        padding-block: 1.6rem;
+    }
+
+    /* ==============reset================ */
+    nav#navigation .wapp *{
+        display: initial;
+        visibility: initial;
+        margin: 0;
+        padding: 0;
+        /* justify-content: initial; */
+        opacity: initial;
+        
+        font-size: initial;
+    }
+    
+    /* =================================== */
+    /* =================   MENU ============= */
+    nav#navigation .social-link,
+    nav#navigation .abri-menu,
+    nav#navigation .fecha-menu{
+        display: none;
+    }
+    nav#navigation .menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 65%; 
+    }
+    nav#navigation .menu ul:nth-child(1){
+        display: flex;
+        flex-direction: row;
+        gap:3.2rem;
+        /* width: 100%; */
+    }
+    nav#navigation .menu ul li a{
+        color: var(--cor-brand-green);
+        opacity: .7;
+    }
+    nav#navigation .menu  li a.active::after,
+    nav#navigation .menu ul li a:hover{
+        font-weight: 700;
+        opacity: 1;
+    }
+    nav#navigation .menu ul li a::after{
+        content: "";
+        width: 0%;
+        height: 2px;
+        display: block;
+        left: -1rem;
+        position: relative;
+        bottom: -1.9rem;
+        transition: width 0.2s;
+        background-color: var(--cor-brand-green);
+    }
+    nav#navigation .menu  li a.active::after,
+    nav#navigation .menu  li a:hover::after{
+        padding-inline: 1rem;
+        width: 100%;
+        
+    }
+    nav#navigation .btn-agenda{
+        font-weight: 700;
+        width: fit-content;
+        padding: 1rem 2.4rem;
+        color: var(--cor-brand-green);
+        background: none;
+        border: 1px solid var(--cor-brand-green);
+    }
+    nav#navigation .btn-agenda.active,
+    nav#navigation .btn-agenda:hover{
+        background-color: var(--cor-brand-green-hover);
+        border: none;
+        color: white;
+    }
+    /* =========SCROLL============= */
+    nav#navigation.scrol .menu ul li a {
+        color: var(--cor-brand-green-lignt2);
+        opacity: 0.6;
+    }
+    nav#navigation.scrol .menu ul li a::after{
+        background-color: white;
+    }
+    nav#navigation.scrol .menu .btn-agenda{
+        border-color: white;
+        color: white;
+    }
+    /* ================== MENU final ============ */
+    /* ===================HOMER INICIAL========== */
+    #homer .wapp{
+        margin-inline: auto;
+        grid-template-columns: 60.5rem 1fr;
+        grid-template-areas: 
+        "A B"
+        "C C";
+    }
+    #homer .col-a{
+        text-align: left;
+        align-self: center;
+        grid-area: A;
+    }
+    #homer .wapp h1{
+        font-size: 5.2rem;
+    }
+    #homer .wapp p{
+        font-size: 1.8rem;
+    }
+    #homer .col-b{
+        grid-area: B;
+    }
+    #homer .numeros{
+        padding: 6rem;
+        gap: 0;
+        height: initial;
+        flex-direction: row;
+        justify-content: space-evenly;
+        grid-area: C;
+    }
+    #homer .numeros .numeros-item + .numeros-item{
+        border-left: 1px solid  var(--cor-brand-green-light);
+    }
+    #homer .numeros .numeros-item{
+        /* display: block; */
+        flex:1;
+    }
+    #homer .button{
+        margin: 0;
+        margin-inline: 0;
+    }
+    #homer img {
+        width: 42rem;
+        flex-direction: row;
+    }
+
+    /* ===================HOMER FINAL============ */
+    /* ====================SECTION=============== */
+    #servico{
+        padding-bottom: 8rem;
+    }
+    #servico .caixa-topo h2{
+        font-size: 4rem;
+        width: 60rem;
+        margin-inline: auto;
+        text-align: center;
+    }
+    #servico .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 4rem;
+    }
+    #servico .card {
+        width: 30%;
+        flex-grow: 1;
+    }
+    /* ====================SECTION FINAL========= */
+    /* ===============SOBRE NOIS ================ */
+    #about{
+        padding-block: 10rem;
+    }
+    #about .wapp{
+        grid-template-columns: 48rem 1fr;       
+        grid-template-areas:  "A B";
+        gap: 6.7rem;
+    }
+    #about .wapp .col-a{
+        align-self: center;
+        grid-area: B;
+    }
+    #about .wapp .col-a h5{
+        margin-bottom: 1.5rem;
+        color: var(--cor-brand-green);
+        
+    }
+    #about .wapp .col-a h2{
+        margin-bottom: 2rem;
+    }
+    #about .wapp .col-b{
+        grid-area: A;
+    }
+    #about .wapp img{
+        width: 48rem;
+    }
+    /* ================SOBRE FINAL=============== */
+    /* ============CONTTATO=========== */
+    #contato .wapp{
+        grid-template-columns: 1fr 57.5rem;
+        grid-template-areas: "A B";
+    }
+    #contato .wapp .col-a{
+        grid-area: A;
+   }
+    #contato .wapp .col-b{
+        grid-area: B;
+    }
+    #contato .wapp img{
+        width: 57.5rem;
+    }
+    #contato .wapp h2{
+        width: 60%;
+    }
+    /* ===============CONTATO FINA================ */
+    /* =================DIREITOS START============= */
+    #direitos{
+        padding-block: 8rem;
+    }
+    #direitos .wapp{
+        grid-template-columns: 1fr 1fr;
+    }
+    #direitos .wapp .col-a{
+        text-align: left;
+        align-self: center;
+    }
+    #direitos .wapp .col-b{
+        justify-self: flex-end;
+        align-self: center;
+    }
+    /* ====================DIREITOD END============== */
+}
+    
+    
+    
+    
+
+
